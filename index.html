@@ -1,140 +1,254 @@
 <!DOCTYPE html>
-<!-- saved from url=(0020)https://axo.web.app/ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="https://axo.web.app/favicon.ico" type="image/x-icon">
-    <title>AXO COIN</title>
 
-    <style media="screen">
-      body, html {
-            padding: 0px;
-            margin: 0px;
-      }
+<html>
 
-      h1, h3, h4, p {
-          font-weight: 300;
-          font-family: 'Fira Code', monospace;
-      }
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-      h1 {
-        color: rgb(126, 51, 255);
-      }
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="./favicon.ico" type="image/x-icon">
+	<title>AXO COIN</title>
 
-      h3 {
-        color: rgb(255, 0, 149);
-      }
+	<style media="screen">
+		body,
+		html {
+			padding: 0px;
+			margin: 0px;
+		}
 
-      footer {
-        /* background: rgb(27,222,55);
+		h1 {
+			color: #FFF;
+			font-weight: 300;
+			font-family: 'Fira Code', monospace;
+		}
+
+		h3,
+		h4,
+		p {
+			font-weight: 300;
+			font-family: 'Fira Code', monospace;
+		}
+
+		/* h1 {
+			color: rgb(126, 51, 255);
+		} */
+
+		h3 {
+			color: rgb(255, 0, 149);
+		}
+
+		footer {
+			/* background: rgb(27,222,55);
         background: -moz-linear-gradient(73deg, rgba(27,222,55,1) 0%, rgba(253,254,0,1) 13%, rgba(0,204,255,1) 37%, rgba(30,114,251,1) 55%, rgba(253,254,0,1) 81%, rgba(255,0,0,1) 100%);
         background: -webkit-linear-gradient(73deg, rgba(27,222,55,1) 0%, rgba(253,254,0,1) 13%, rgba(0,204,255,1) 37%, rgba(30,114,251,1) 55%, rgba(253,254,0,1) 81%, rgba(255,0,0,1) 100%);
         background: linear-gradient(73deg, rgba(27,222,55,1) 0%, rgba(253,254,0,1) 13%, rgba(0,204,255,1) 37%, rgba(30,114,251,1) 55%, rgba(253,254,0,1) 81%, rgba(255,0,0,1) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1bde37",endColorstr="#ff0000",GradientType=1); */
-        text-align: center;
-        padding: 30px 0 100px 0;
-        color: #000;
-      }
+			text-align: center;
+			padding: 30px 0 100px 0;
+			color: #000;
+		}
 
-      .barra {
-        display: flex;
-        margin-bottom: 40px;
-      }
+		.barra {
+			display: flex;
+			margin-bottom: 40px;
+		}
 
-      .rojo, .amarillo, .verde, .azul, .celeste {
-        height: 5px; border-right: 7px #FFF solid;
-        display: block;
-        width: 100%;
-      }
+		.rojo,
+		.amarillo,
+		.verde,
+		.azul,
+		.celeste {
+			height: 5px;
+			border-right: 7px #FFF solid;
+			display: block;
+			width: 100%;
+		}
 
-      .rojo {
-        background-color: #F00;
-      }
+		.rojo {
+			background-color: #F00;
+		}
 
-      .amarillo {
-        background-color: rgb(255, 225, 0);
-      }
-
-
-      .azul {
-        background-color: rgb(48, 101, 198);
-      }
-
-      .celeste {
-        background-color: rgb(0, 204, 255);
-      }
-
-      .verde {
-        background-color: rgb(0, 172, 0);
-      }
-    </style>
-  <link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style></head>
-  <body cz-shortcut-listen="true">
-   
-
-<section style="margin-top: 20px; margin-bottom: 10px; text-align: center;">
-  <img src="./index_files/axo.svg" alt="" width="150px">
-  <h1>AXO Blockchain Whitepaper</h1>
-</section>
-
-<div style="max-width: 800px; padding: 20px 20px; margin: 0 auto 100px auto;">
-  <h3>Resumen Ejecutivo</h3>
-<p>AXO Blockchain representa una nueva generación de tecnología blockchain diseñada para facilitar la implementación de smart contracts en un entorno semi-descentralizado. Mediante la integración de nodos de autoridad y una estructura de minería innovadora, AXO busca ofrecer una plataforma segura, eficiente y escalable para la gestión de trámites en administraciones públicas. La criptomoneda nativa de la red, AXO, servirá como medio de intercambio dentro de la plataforma, incentivando la participación y asegurando la operación de la red.</p>
-
-<h3>1. Introducción</h3>
-<p>La blockchain de AXO nace de la necesidad de crear un sistema que combine la eficiencia y la capacidad de regulación de las redes centralizadas con la seguridad y transparencia de las redes descentralizadas. Este whitepaper detalla la arquitectura, el mecanismo de consenso, la estructura de minería, y la implementación de smart contracts que definen a AXO Blockchain como una solución innovadora para la digitalización de servicios gubernamentales.</p>
-
-<h3>2. Arquitectura de la Red</h3>
-<p>AXO adopta una arquitectura semi-descentralizada con nodos de autoridad seleccionados para validar transacciones y ejecutar smart contracts. Inicialmente, los nodos se desarrollarán en JavaScript para facilitar el rápido despliegue y la flexibilidad. Posteriormente, se migrará a un lenguaje de programación más robusto para mejorar el rendimiento y la seguridad de la red.</p>
-
-<h4>2.1 Nodos de Autoridad</h4>
-<p>Los nodos de autoridad serán responsables de la validación de transacciones y la ejecución de smart contracts, asegurando la integridad y el orden correcto de las transacciones en la blockchain. La selección de estos nodos seguirá un proceso riguroso para garantizar la confiabilidad y compromiso con la red.</p>
-
-<h3>3. Mecanismo de Consenso</h3>
-<p>La blockchain de AXO utilizará un mecanismo de consenso híbrido diseñado para equilibrar eficiencia, seguridad y descentralización. Este mecanismo permitirá la participación efectiva de los nodos de autoridad, al tiempo que asegura la inmutabilidad y transparencia de la red.</p>
-
-<h3>4. Minería y la Criptomoneda AXO</h3>
-<p>La minería en AXO Blockchain no solo validará transacciones y mantendrá la seguridad de la red, sino que también generará la criptomoneda AXO. Los mineros recibirán recompensas en AXO por su contribución a la red, incentivando la participación continua y el mantenimiento de la red.</p>
-
-<h4>4.1 Economía de AXO</h4>
-<p>La emisión de AXO estará ligada al uso de la red por parte de las administraciones públicas para el procesamiento de trámites. Esto crea una economía sostenible donde el valor de AXO está directamente relacionado con la utilidad y demanda de los servicios de la blockchain.</p>
-
-<h3>5. Implementación de Smart Contracts</h3>
-<p>AXO Blockchain permitirá la creación y ejecución de smart contracts, proporcionando una plataforma flexible y segura para la automatización de procesos en el sector público. Los smart contracts en AXO serán fundamentales para facilitar transacciones automáticas, transparentes y sin intermediarios.</p>
-
-<h3>6. Roadmap</h3>
-<ol>
-    <li><p>Desarrollo Inicial y Pruebas: Implementación de la versión inicial de la red en JavaScript y despliegue de una testnet.</p></li>
-    <li><p>Conseguir Inversión y Fondos: Asegurar la financiación necesaria para el desarrollo continuo y la expansión de la red.</p></li>
-    <li><p>Lanzamiento de la Mainnet: Transición a la mainnet con nodos de autoridad seleccionados.</p></li>
-    <li><p>Desarrollo de la DApp para Transacciones: Creación de una aplicación descentralizada (DApp) que permita a los usuarios realizar transacciones y acceder a servicios directamente desde la plataforma.</p></li>
-    <li><p>Creación de la Plataforma de Trámites de Gobierno: Desarrollo de una plataforma específica para la gestión de trámites gubernamentales utilizando la tecnología blockchain.</p></li>
-    <li><p>Integración de Smart Contracts: Desarrollo y despliegue de smart contracts para automatizar operaciones y servicios en la red.</p></li>
-    <li><p>Migración a Lenguaje Robusto: Desarrollo y migración de nodos a un lenguaje de programación más eficiente para mejorar el rendimiento y la seguridad.</p></li>
-    <li><p>Adopción por Administraciones Públicas: Expansión y adopción de AXO Blockchain para trámites gubernamentales.</p></li>
-    <li><p>Conexión con Wallets: Integración de la red con wallets digitales para facilitar transacciones y accesibilidad para los usuarios.</p></li>
-</ol>
+		.amarillo {
+			background-color: rgb(255, 225, 0);
+		}
 
 
-<h3>7. Consideraciones de Seguridad</h3>
-<p>La seguridad es una prioridad máxima para AXO Blockchain. Se implementarán medidas rigurosas, incluyendo auditorías de seguridad regulares, cifrado de última generación y protocolos de autenticación robustos para proteger la red y sus usuarios.</p>
+		.azul {
+			background-color: rgb(48, 101, 198);
+		}
 
-<h3>Conclusión</h3>
-<p>AXO Blockchain se posiciona como una solución pionera para la implementación de smart contracts y la digitalización de servicios gubernamentales, equilibrando eficiencia, seguridad y descentralización.</p>
+		.celeste {
+			background-color: rgb(0, 204, 255);
+		}
 
-</div>
+		.verde {
+			background-color: rgb(0, 172, 0);
+		}
+
+		.fondo-colorido {
+			background-size: 100% 100%;
+			background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+			background-image: 
+				radial-gradient(74% 86% at 10% 38%, #A06AD8 24%, #FF007750 100%), /* Morado ligeramente más claro a la izquierda */
+				radial-gradient(35% 56% at 91% 74%, #FFDD73 9%, #FF007750 100%), /* Amarillo más equilibrado a la derecha */
+				radial-gradient(21% 37% at 72% 23%, #FFB0C9 24%, #FF007750 100%), 
+				radial-gradient(31% 43% at 7% 98%, #FFFFFF 24%, #FF007750 100%),
+				radial-gradient(18% 28% at 35% 87%, #FFFFFF 7%, #FF007750 100%),
+				radial-gradient(42% 53% at 34% 72%, #FFFFFF 7%, #FF007750 100%),
+				radial-gradient(42% 53% at 15% 94%, #FFFFFF 7%, #FF007750 100%),
+				radial-gradient(70% 53% at 36% 76%, #FF8AB4 0%, #FF007750 100%), /* Rosa más balanceado */
+				radial-gradient(18% 28% at 18% 71%, #FFFFFF80 6%, #FF007750 100%),
+				radial-gradient(18% 28% at 24% 50%, #FFBCD9 7%, #FF007750 100%),
+				linear-gradient(125deg, #FF77BD 1%, #D85198 100%); /* Ajuste en la saturación */
+		}
 
 
-<footer>
-  <div class="barra">
-    <div class="verde"></div>
-    <div class="amarillo"></div>
-    <div class="rojo"></div>
-    <div class="azul"></div>
-    <div class="celeste"></div>
-  </div>
-  <p>albertodevmx@gmail.com</p>
-</footer>
-  
 
-<iframe id="nr-ext-rsicon" style="position: absolute; display: none; width: 50px; height: 50px; z-index: 2147483647; border-style: none; background: transparent;" src="./index_files/saved_resource.html"></iframe></body></html>
+
+
+	</style>
+	<link type="text/css" rel="stylesheet" id="dark-mode-custom-link">
+	<link type="text/css" rel="stylesheet" id="dark-mode-general-link">
+	<style lang="en" type="text/css" id="dark-mode-custom-style"></style>
+	<style lang="en" type="text/css" id="dark-mode-native-style"></style>
+	<style lang="en" type="text/css" id="dark-mode-native-sheet"></style>
+</head>
+
+<body cz-shortcut-listen="true">
+
+
+	<section style="margin-bottom: 30px; text-align: center; padding: 30px 0 10px 0;" class="fondo-colorido">
+		<img src="./assets/img/axo-min.svg" alt="" width="120px">
+		<h1>AXO Blockchain Whitepaper</h1>
+	</section>
+
+	<div style="max-width: 800px; padding: 20px 20px; margin: 0 auto 100px auto;">
+		<h3>Resumen Ejecutivo</h3>
+		<p>AXO Blockchain es una plataforma diseñada para la implementación de contratos inteligentes en la
+			administración
+			pública.
+			Su estructura semi-descentralizada garantiza eficiencia, seguridad y transparencia en los procesos
+			administrativos,
+			reduciendo costos y tiempos de gestión. La criptomoneda nativa, AXO, facilitará las transacciones dentro del
+			ecosistema,
+			promoviendo la adopción y sustentabilidad del sistema.</p>
+
+		<h3>1. Introducción</h3>
+		<p>La blockchain de AXO nace como una solución para combinar la regulación eficiente de sistemas centralizados
+			con
+			la seguridad
+			y transparencia de las redes descentralizadas. Este whitepaper detalla la arquitectura de la red, el
+			mecanismo de
+			consenso
+			y la implementación de contratos inteligentes que hacen de AXO una alternativa viable para la digitalización
+			de
+			trámites gubernamentales.</p>
+
+		<h3>2. Arquitectura de la Red</h3>
+		<p>AXO Blockchain adopta una arquitectura semi-descentralizada basada en Cosmos y Tendermint, lo que permite una
+			comunicación
+			rápida y segura entre los nodos de autoridad. El desarrollo de la red se ha realizado en Rust, lo que
+			garantiza un
+			alto
+			rendimiento y seguridad desde su fase inicial.</p>
+
+		<h4>2.1 Nodos de Autoridad</h4>
+		<p>Los nodos de autoridad validarán transacciones y ejecutarán contratos inteligentes, asegurando la
+			confiabilidad
+			del sistema.
+			La selección de estos nodos seguirá criterios estrictos, incluyendo compromiso con la red y capacidad
+			técnica para
+			operar
+			infraestructura segura.</p>
+
+		<h3>3. Mecanismo de Consenso</h3>
+		<p>AXO Blockchain implementará un mecanismo de consenso basado en Tendermint, optimizando la velocidad de las
+			transacciones y
+			garantizando la inmutabilidad de los registros. Este modelo permite una administración eficiente de los
+			nodos
+			validadores
+			y refuerza la confianza en la plataforma.</p>
+
+		<h3>4. Emisión y Gobernanza de la Criptomoneda AXO</h3>
+		<p>AXO contará con una emisión inicial de tokens para su ecosistema. La emisión futura de tokens será decidida
+			mediante
+			un sistema de gobernanza donde los nodos validadores podrán votar sobre la emisión controlada de nuevos
+			tokens,
+			asegurando estabilidad y evitando la desvalorización de la criptomoneda.</p>
+
+		<h3>5. Implementación de Smart Contracts</h3>
+		<p>AXO Blockchain permitirá la creación y ejecución de contratos inteligentes en un entorno seguro y escalable.
+			Gracias a su integración con Cosmos y el uso de Rust, la plataforma garantiza eficiencia y robustez en la
+			automatización de procesos gubernamentales.</p>
+
+		<h3>6. Roadmap</h3>
+		<ol>
+			<li>
+				<p>Conceptualización de la red: Diseño del modelo económico, reglas de gobernanza y distribución de
+					tokens.</p>
+			</li>
+			<li>
+				<p>Desarrollo del protocolo base: Implementación de los módulos esenciales en Rust sobre Cosmos SDK.</p>
+			</li>
+			<li>
+				<p>Pruebas iniciales en entorno local: Validación de la funcionalidad básica de nodos y transacciones.
+				</p>
+			</li>
+			<li>
+				<p>Simulación de red: Pruebas con múltiples nodos en un entorno controlado antes de la testnet.</p>
+			</li>
+			<li>
+				<p>Auditorías de código y seguridad: Revisión técnica para garantizar estabilidad y confiabilidad.</p>
+			</li>
+			<li>
+				<p><strong style="color: green;">Fase actual: Testnet en funcionamiento</strong></p>
+			</li>
+			<li>
+				<p>Lanzamiento de la mainnet: Implementación definitiva con nodos de gobernanza.</p>
+			</li>
+			<li>
+				<p>Integración con administraciones públicas: Expansión de la adopción de AXO.</p>
+			</li>
+			<li>
+				<p>Desarrollo de aplicaciones descentralizadas (DApps): Creación de plataformas
+					para facilitar trámites y servicios digitales.</p>
+			</li>
+			<li>
+				<p>Interoperabilidad con otras blockchains: Conexión con ecosistemas existentes para ampliar la
+					funcionalidad.
+				</p>
+			</li>
+		</ol>
+
+		<h3>7. Consideraciones de Seguridad</h3>
+		<p>AXO Blockchain hereda la seguridad de la infraestructura de Cosmos y Tendermint, lo que incluye mecanismos de
+			consenso tolerantes a fallos y protección contra ataques Sybil y de doble gasto. Además, se implementarán
+			auditorías
+			periódicas, autenticación robusta y cifrado avanzado para proteger la red y sus usuarios.</p>
+
+		<h3>Conclusión</h3>
+		<p>AXO Blockchain se posiciona como una plataforma confiable y eficiente para la digitalización de trámites
+			gubernamentales.
+			Su diseño basado en Cosmos y Tendermint ofrece seguridad y escalabilidad, mientras que su modelo de
+			gobernanza
+			garantiza estabilidad financiera. Con una visión clara de expansión y adopción, AXO representa una
+			oportunidad
+			sólida
+			para quienes buscan participar en la próxima revolución tecnológica de la administración pública.</p>
+
+	</div>
+
+
+	<footer>
+		<div class="barra">
+			<div class="verde"></div>
+			<div class="amarillo"></div>
+			<div class="rojo"></div>
+			<div class="azul"></div>
+			<div class="celeste"></div>
+		</div>
+		<p>albertodevmx@gmail.com</p>
+	</footer>
+</body>
+
+</html>
